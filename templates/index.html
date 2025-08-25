@@ -1,0 +1,24 @@
+{% extends 'base/layout.html' %}
+{% block content %}
+<div class="ai-bg"></div>
+<div class="ai-inventario-container">
+    <h1 class="ai-title">🧪 Sistema GIL - Laboratorios SENA - CENTRO MINERO 🧪</h1>
+    <div class="ai-card">
+        <p class="ai-hint">Bienvenido al sistema de gestión de laboratorios del SENA. Aquí podrás administrar el inventario, préstamos y reconocimiento de equipos de laboratorio de manera eficiente y moderna.</p>
+    </div>
+    <div class="ai-menu-links">
+        <a href="/reconocimiento" class="ai-btn-glow">🧪 Reconocimiento de Equipos</a>
+        <a href="/inventario" class="ai-btn-glow">📦 Inventario de Equipos</a>
+        <a href="/prestamos" class="ai-btn-glow">📋 Préstamos</a>
+        <a href="/laboratorios" class="ai-btn-glow">🏢 Laboratorios</a>
+        <a href="/usuarios" class="ai-btn-glow">👤 Usuarios</a>
+    </div>
+    <div class="ai-credits">
+        <p>Desarrollado por: <strong>Ronal Stiven Suárez Santiago</strong> | SENA 2025</p>
+        <img src="/static/images/sena_logo.png" alt="Logo SENA" style="height:40px;margin-top:10px;">
+    </div>
+</div>
+<footer class="ai-footer">
+    <p>Contacto: ronal5368@gmail.com | Todos los derechos reservados</p>
+</footer>
+{% endblock %}

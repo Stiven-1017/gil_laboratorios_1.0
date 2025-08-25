@@ -1,0 +1,42 @@
+{% extends 'base/layout.html' %}
+{% block content %}
+<div class="ai-bg"></div>
+<div class="ai-inventario-container">
+    <h1 class="ai-title">🧪 Reconocimiento de Equipos de Laboratorio 🧪</h1>
+
+    <!-- Cámara en vivo -->
+    <div class="ai-card" style="padding: 0; background: transparent; box-shadow: none; border: none;">
+        <div class="video-wrapper video-glow" style="margin-bottom: 1.5rem;">
+            <img src="{{ url_for('recognition.video_feed') }}" alt="Video en vivo" class="video-feed video-large">
+        </div>
+        <p class="ai-hint">Muestra un microscopio frente a la cámara para ver la detección en tiempo real.</p>
+    </div>
+
+    <!-- Formulario para cargar imagen -->
+    <form method="POST" enctype="multipart/form-data" style="margin-bottom: 1.5rem; text-align:center;">
+        <label for="imagen" class="ai-btn-glow" style="cursor:pointer;">📷 Seleccionar imagen</label>
+        <input type="file" id="imagen" name="imagen" accept="image/*" style="display:none;" onchange="this.form.submit()">
+        <div style="margin-top:0.7rem; color:#bdbdfc; font-size:0.98rem;">O usa la cámara en vivo de arriba</div>
+    </form>
+
+    <!-- Resultado del reconocimiento -->
+    {% if resultado %}
+    <div class="ai-card" style="margin-top:1.5rem;">
+        <h3 style="margin-bottom:0.7rem;">Resultado del reconocimiento:</h3>
+        <p style="font-size:1.15rem; color:#7c4dff; font-weight:600;">{{ resultado }}</p>
+        {% if equipo_info %}
+            <h4 style="margin-top:1.2rem;">Información del equipo en inventario:</h4>
+            <ul style="text-align:left;">
+                <li><b>Nombre:</b> {{ equipo_info.nombre_equipo }}</li>
+                <li><b>Marca:</b> {{ equipo_info.marca }}</li>
+                <li><b>Modelo:</b> {{ equipo_info.modelo }}</li>
+                <li><b>Estado:</b> {{ equipo_info.estado_equipo }}</li>
+                <li><b>Estado físico:</b> {{ equipo_info.estado_fisico }}</li>
+            </ul>
+        {% else %}
+            <div style="color:#ffb300; margin-top:1rem;">No se encontró información de este equipo en el inventario.</div>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

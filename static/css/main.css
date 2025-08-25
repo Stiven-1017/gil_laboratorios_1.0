@@ -1,0 +1,131 @@
+/* Menú de enlaces en el index */
+.ai-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    align-items: center;
+    margin-bottom: 2.2rem;
+}
+
+/* Créditos */
+.ai-credits {
+    margin-top: 2.5rem;
+    text-align: center;
+    color: #bdbdfc;
+    font-size: 1rem;
+    opacity: 0.85;
+}
+.ai-credits img {
+    margin-top: 0.7rem;
+    filter: drop-shadow(0 0 8px #7c4dff88);
+}
+
+/* Pie de página */
+.ai-footer {
+    width: 100vw;
+    background: rgba(34, 24, 56, 0.85);
+    color: #bdbdfc;
+    text-align: center;
+    padding: 1.1rem 0 0.7rem 0;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    border-top: 1.5px solid rgba(120, 80, 255, 0.13);
+    box-shadow: 0 -2px 16px 0 #7c4dff22;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #18142b;
+}
+
+/* Fondo oscuro */
+.ai-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: 0;
+    background: linear-gradient(120deg, #1a1832 0%, #2d1e5f 60%, #1e2a78 100%);
+    background-size: 200% 200%;
+    animation: ai-bg-move 10s ease-in-out infinite alternate;
+}
+
+@keyframes ai-bg-move {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Contenedor principal centrado*/
+.ai-inventario-container {
+    position: relative;
+    z-index: 2;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem 2rem 1.5rem;
+    border-radius: 32px;
+    box-shadow: 0 8px 32px rgba(44, 0, 80, 0.25);
+    max-width: 700px;
+    width: 98%;
+    margin: 3.5rem auto 2rem auto;
+    background: rgba(34, 24, 56, 0.7);
+    backdrop-filter: blur(12px) saturate(120%);
+    border: 1.5px solid rgba(120, 80, 255, 0.18);
+}
+
+/* Titulo grande y claro*/
+.ai-title {
+    color: #fff;
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 16px #7c4dff, 0 0px 2px #000;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Tarjeta glassmorphism */
+.ai-card {
+    background: rgba(44, 0, 80, 0.45);
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(120, 80, 255, 0.10);
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    color: #e0e0ff;
+    border: 1.5px solid rgba(120, 80, 255, 0.13);
+}
+
+/* Texto de ayuda */
+.ai-hint {
+    font-size: 1.15rem;
+    color: #bdbdfc;
+    text-align: center;
+}
+
+/* Botón glow */
+.ai-btn-glow {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.9rem 2.2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #7c4dff 0%, #536dfe 100%);
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 0 16px 2px #7c4dff, 0 2px 12px rgba(44,0,80,0.13);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+.ai-btn-glow:hover {
+    background: linear-gradient(90deg, #536dfe 0%, #7c4dff 100%);
+    box-shadow: 0 0 32px 8px #7c4dff;
+    transform: scale(1.05);
+}

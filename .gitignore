@@ -1,0 +1,22 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+*.log
+
+# DB
+*.db
+*.sqlite3
+
+# Uploads y backups
+uploads/*
+!uploads/.gitkeep
+backups/*
+!backups/.gitkeep
+
+# IDE
+.vscode/
+.idea/
