@@ -4,7 +4,7 @@
 # Fecha: 21/08/2025
 
 import mysql.connector
-import os
+import os           
 from dotenv import load_dotenv
 
 # Cargar variables de entorno para la conexión
